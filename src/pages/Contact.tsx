@@ -4,7 +4,7 @@ import { useState, type FormEvent } from "react";
 import { SectionHeading } from "@/components/SectionHeading";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { SocialIcon } from "@/components/SocialIcon";
-import { siteConfig } from "@/data/site";
+import { siteConfig, socialLinks } from "@/data/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -126,8 +126,9 @@ export default function Contact() {
               <MessageCircle className="h-4 w-4" />
               关注我的社交媒体
             </p>
-            <div className="flex flex-wrap gap-2">
-              {siteConfig.social.map((s) => (
+            {socialLinks.length > 0 && (
+              <div className="flex flex-wrap gap-2">
+                {socialLinks.map((s) => (
                 <a
                   key={s.name}
                   href={s.url}
@@ -140,6 +141,7 @@ export default function Contact() {
                 </a>
               ))}
             </div>
+          )}
           </div>
         </motion.div>
 

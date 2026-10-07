@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, MapPin, Phone, Sparkles } from "lucide-react";
-import { siteConfig } from "@/data/site";
+import { siteConfig, socialLinks } from "@/data/site";
 import { SocialIcon } from "@/components/SocialIcon";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import aboutContent from "@/content/about.md?raw";
@@ -78,8 +78,9 @@ export default function Home() {
             </div>
 
             {/* 社交链接 */}
-            <div className="mt-7 flex items-center gap-2">
-              {siteConfig.social.map((s) => (
+            {socialLinks.length > 0 && (
+              <div className="mt-7 flex items-center gap-2">
+                {socialLinks.map((s) => (
                 <a
                   key={s.name}
                   href={s.url}
@@ -92,6 +93,7 @@ export default function Home() {
                 </a>
               ))}
             </div>
+          )}
           </motion.div>
 
           {/* 右侧头像 */}

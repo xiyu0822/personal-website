@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
-import { navItems, siteConfig } from "@/data/site";
+import { navItems, siteConfig, socialLinks } from "@/data/site";
 import { SocialIcon } from "@/components/SocialIcon";
 
 export function Footer() {
@@ -37,8 +37,9 @@ export function Footer() {
           </div>
 
           {/* 社交 */}
-          <div className="flex items-center gap-2">
-            {siteConfig.social.map((s) => (
+          {socialLinks.length > 0 && (
+            <div className="flex items-center gap-2">
+              {socialLinks.map((s) => (
               <a
                 key={s.name}
                 href={s.url}
@@ -51,6 +52,7 @@ export function Footer() {
               </a>
             ))}
           </div>
+          )}
         </div>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-border/60 pt-6 text-xs text-muted-foreground sm:flex-row">
