@@ -1,0 +1,26 @@
+# 依赖（348MB，绝不能提交）
+node_modules/
+
+# 构建产物
+dist/
+build/
+out/
+
+# 环境变量和密钥（绝对不能提交）
+.env
+.env.local
+.env.*.local
+
+# 日志
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
