@@ -1,4 +1,4 @@
-# 林晓 · 个人展示网站
+# 习羽 · 个人展示网站
 
 一个功能完整、设计现代的个人作品集网站，基于 **React + TypeScript + Vite + Tailwind CSS + shadcn/ui** 构建。
 
