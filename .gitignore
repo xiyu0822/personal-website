@@ -24,3 +24,6 @@ Thumbs.db
 # 编辑器
 .vscode/
 .idea/
+
+# 本地暂存的 GitHub Pages 工作流（令牌缺 workflow 权限，暂未提交）
+.github/
